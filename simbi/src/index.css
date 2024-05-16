@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.swiper-horizontal {
+  /* touch-action: pan-y; */
+  width: 100%;
+  overflow-x: clip;
+}
+
+div.swiper-wrapper {
+  min-height: 500px;
+}
