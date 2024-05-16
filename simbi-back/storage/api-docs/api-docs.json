@@ -1,0 +1,67 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Simbi Api",
+        "version": "1.0.1"
+    },
+    "paths": {
+        "/api/projects": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "summary": "Listar apenas 20 projetos para contruçao do carrossel",
+                "operationId": "getProjects",
+                "responses": {
+                    "200": {
+                        "description": "List only 20 projects",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "nome": {
+                                                "type": "string"
+                                            },
+                                            "municipio": {
+                                                "type": "string"
+                                            },
+                                            "uf": {
+                                                "type": "string"
+                                            },
+                                            "resumo": {
+                                                "type": "string"
+                                            },
+                                            "valor_aprovado": {
+                                                "type": "string"
+                                            },
+                                            "valor_captado": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/projects/all": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "summary": "Listar todos os projetos com detalhes",
+                "operationId": "getAllProjects",
+                "responses": {
+                    "200": {
+                        "description": "Lista de projetos com detalhes"
+                    }
+                }
+            }
+        }
+    }
+}
