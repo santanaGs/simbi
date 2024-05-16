@@ -2,6 +2,8 @@
 
 Este é um projeto que combina Laravel como backend e React como frontend. Este README fornecerá instruções sobre como configurar e executar o projeto localmente.
 
+<img src="https://imgur.com/G4FU6gs.png"/>
+
 ## Requisitos
 
 - PHP >= 7.3
@@ -39,13 +41,13 @@ Este é um projeto que combina Laravel como backend e React como frontend. Este 
    php artisan migrate
    ```
 
-7. Inicie o servidor de desenvolvimento do Laravel:
+7. Para rodar localmente, é necessário executar o comando `php artisan serve` com o IP da máquina. Você pode encontrar o endereço IP da sua máquina usando o comando `ipconfig` no Windows ou `ifconfig` no macOS e Linux. Em seguida, substitua `localhost` pelo seu endereço IP ao iniciar o servidor Laravel. Por exemplo:
 
-   ```bash
-   php artisan serve
-   ```
+```bash
+php artisan serve --host=SEU_ENDEREÇO_IP --port=8000
+```
 
-O backend estará acessível em `http://localhost:8000`.
+O backend estará acessível em `http://SEU_ENDEREÇO_IP:8000`.
 
 ## Configuração do Frontend (React)
 
@@ -70,6 +72,11 @@ O backend estará acessível em `http://localhost:8000`.
 O frontend estará acessível em `http://localhost:3000`.
 
 ## Como Usar
+
+Altere nos arquivos:
+
+simbi/src/screens/list/index.tsx a linha 33 a url para http://SEU_ENDEREÇO_IP:8000/api/projects
+simbi/src/screens/all/index.tsx a linha 24 a url para http://SEU_ENDEREÇO_IP:8000/api/projects/all
 
 Com ambos os servidores rodando, você poderá acessar o frontend em `http://localhost:3000` e interagir com o aplicativo.
 

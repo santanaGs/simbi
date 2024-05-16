@@ -10,6 +10,9 @@ export const Container = styled.div`
   @media screen and (max-width: 768px) {
     width: inherit;
   }
+  @media screen and (max-width: 1366px) {
+    width: 340px;
+  }
 `;
 
 export const Content = styled.div`
